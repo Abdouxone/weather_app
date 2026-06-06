@@ -19,7 +19,7 @@ export default function Home() {
         </p>
         <div className="flex flex-row mt-5 gap-3 items-center  justify-center">
           <SearchBar />
-          {/* <TempSwitch /> */}
+          <TempSwitch />
         </div>
       </div>
     </div>
