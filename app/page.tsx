@@ -1,13 +1,14 @@
 import Image from "next/image";
 import SearchBar from "./components/SearchBar";
 import TempSwitch from "./components/TempSwitch";
+import WeatherCard from "./components/WeatherCard";
 
 export default function Home() {
   return (
-    <div className="flex flex-col relative  min-h-screen overflow-hidden ">
+    <div className="flex flex-col relative min-h-screen overflow-hidden ">
       <div className="absolute z-1 inset-0 bg-[url('/bg.jpg')] h-full w-full bg-cover bg-no-repeat"></div>
-      <div className="z-2 mt-5 flex flex-col items-center justify-center">
-        <h1 className="text-white font-bold text-6xl">
+      <div className="z-2 mt-5 flex flex-col container mx-auto items-center justify-center">
+        <h1 className="text-white font-bold  text-6xl">
           Weather
           <span className="text-transparent bg-clip-text bg-linear-to-r from-blue-400 to-purple-400">
             App
@@ -17,9 +18,15 @@ export default function Home() {
           Experience weather like never before with real-time data, beautiful
           visuals, and precise forecasts for any location worldwide
         </p>
-        <div className="flex flex-row mt-5 gap-3 items-center  justify-center">
-          <SearchBar />
+        <div className="flex  flex-row mt-5 gap-3 items-center  justify-center">
+          {/* <SearchBar /> */}
           <TempSwitch />
+        </div>
+
+        <div className="mt-8 grid lg:grid-cols-3 gap-8 w-full grid-cols-1">
+          <div className="col-span-2 ">
+            <WeatherCard />
+          </div>
         </div>
       </div>
     </div>

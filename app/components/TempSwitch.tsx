@@ -2,9 +2,19 @@ import React from "react";
 
 export default function TempSwitch() {
   return (
-    <div className="backdrop-blur-sm gap-5 p-2 border-2 border-zinc-400 text-white rounded-xl flex flex-row">
-      <p className="cursor-pointer">C</p>
-      <p className="cursor-pointer">F</p>
+    <div className="bg-white/10 backdrop-blur-md text-white/80 border border-white/20 rounded-2xl p-1 shadow-lg">
+      <div className="flex items-center">
+        <button
+          className={`px-4 py-2 rounded-xl text-sm font-semibold transition-all duration-300`}
+        >
+          °C
+        </button>
+        <button
+          className={`px-4 py-2 rounded-xl text-sm font-semibold transition-all duration-300`}
+        >
+          °F
+        </button>
+      </div>
     </div>
   );
 }
