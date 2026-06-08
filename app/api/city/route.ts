@@ -18,7 +18,9 @@ export async function GET(request: Request) {
         { status: 404 },
       );
 
-    const response = await fetch(`${API_URL}?q=${city}&appid=${API_KEY}`);
+    const response = await fetch(
+      `${API_URL}/weather?q=${city}&appid=${API_KEY}`,
+    );
     if (!response.ok) {
       return NextResponse.json({
         error: "Error while fetching weather for the city",
