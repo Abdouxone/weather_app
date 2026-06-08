@@ -2,6 +2,7 @@ import Image from "next/image";
 import SearchBar from "./components/SearchBar";
 import TempSwitch from "./components/TempSwitch";
 import WeatherCard from "./components/WeatherCard";
+import WeatherForecast from "./components/WeatherForecast";
 
 export default function Home() {
   return (
@@ -26,6 +27,10 @@ export default function Home() {
         <div className="mt-8 grid lg:grid-cols-3 gap-8 w-full grid-cols-1">
           <div className="col-span-2 ">
             <WeatherCard />
+          </div>
+          <div className="lg:col-span-1">
+            {/* Conditional Rendering */}
+            <WeatherForecast />
           </div>
         </div>
       </div>
